@@ -959,7 +959,9 @@
 
       const Header = ({ title }) => (
         <header className="flex justify-between items-center p-6 bg-white border-b border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
+          <h2 className="text-xl font-bold text-gray-800 sm:text-3xl">
+            {title}
+          </h2>
           <div className="flex items-center space-x-6">
             <button className="relative text-gray-500 hover:text-gray-700">
               <Bell size={24} />
@@ -968,7 +970,7 @@
               <img
                 src="https://placehold.co/40x40/4A5568/FFFFFF?text=SH"
                 alt="User"
-                className="w-10 h-10 rounded-full"
+                className="w-10 h-10 rounded-full max-w-none max-h-none"
               />
               <div className="hidden sm:block">
                 <p className="font-semibold text-gray-800">Sarah Ho</p>
@@ -1380,7 +1382,7 @@
           : [];
 
         return (
-          <div className="p-8">
+          <div className="p-2 sm:p-8">
             <div className="bg-white p-4 rounded-xl shadow-md mb-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
                 <div className="md:col-span-4">
@@ -2712,7 +2714,7 @@
         ];
 
         return (
-          <div className="p-8">
+          <div className="p-2 sm:p-8">
             <div className="bg-blue-50 border border-blue-200 text-blue-800 p-4 rounded-lg mb-6">
               <h4 className="font-bold">Talent Grid View</h4>
               <p className="text-sm mt-1">
@@ -3586,9 +3588,9 @@
                 onCancel={() => setIsAddRoleModalOpen(false)}
               />
             )}
-            <div className="p-8">
+            <div className="p-2 sm:p-8">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-semibold text-gray-800">
+                <h3 className="text-2xl font-semibold text-gray-800 hidden sm:block">
                   Succession Tools
                 </h3>
                 <div className="bg-gray-200 p-1 rounded-lg flex items-center">
@@ -3674,7 +3676,7 @@
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-            <main className="flex-1 flex flex-col ml-2">
+            <main className="flex-1 flex flex-col">
               <Header
                 title={
                   currentPage === "ProfilePage"
